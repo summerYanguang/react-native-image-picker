@@ -1,5 +1,5 @@
 
-# React Native Image Picker [![npm version](https://badge.fury.io/js/react-native-image-picker.svg)](https://badge.fury.io/js/react-native-image-picker) ![MIT](https://img.shields.io/dub/l/vibe-d.svg) ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg)
+# React Native Image Picker [![npm version](https://badge.fury.io/js/react-native-image-picker.svg)](https://badge.fury.io/js/react-native-image-picker) [![npm](https://img.shields.io/npm/dt/react-native-image-picker.svg)](https://www.npmjs.org/package/react-native-image-picker) ![MIT](https://img.shields.io/dub/l/vibe-d.svg) ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg)
 
 A React Native module that allows you to use native UI to select a photo/video from the device library or directly from the camera, like so:
 
@@ -170,7 +170,7 @@ On iOS, don't assume that the absolute uri returned will persist. See [#107](/..
 option | iOS  | Android | Info
 ------ | ---- | ------- | ----
 title | OK | OK | Specify `null` or empty string to remove the title
-cancelButtonTitle | OK | OK |
+cancelButtonTitle | OK | OK | Specify `null` or empty string to remove this button (Android only)
 takePhotoButtonTitle | OK | OK | Specify `null` or empty string to remove this button
 chooseFromLibraryButtonTitle | OK | OK | Specify `null` or empty string to remove this button
 customButtons | OK | OK | An array containing objects with the name and title of buttons
@@ -187,7 +187,8 @@ noData | OK | OK | If true, disables the base64 `data` field from being generate
 storageOptions | OK | OK | If this key is provided, the image will get saved in the Documents directory on iOS, and the Pictures directory on Android (rather than a temporary directory)
 storageOptions.skipBackup | OK | - | If true, the photo will NOT be backed up to iCloud
 storageOptions.path | OK | - | If set, will save image at /Documents/[path] rather than the root
-storageOptions.cameraRoll | OK | - | If true, the cropped photo will be saved to the iOS Camera roll.
+storageOptions.cameraRoll | OK | - | If true, the cropped photo will be saved to the iOS Camera Roll.
+storageOptions.waitUntilSaved | OK | - | If true, will delay the response callback until after the photo/video was saved to the Camera Roll.
 
 ### The Response Object
 
